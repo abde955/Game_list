@@ -1,0 +1,53 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #162447;
+    color: #fbf5f3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo-container {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .app-logo {
+    color: #e28413;
+    margin: 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: #fbf5f3;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #e28413;
+  }
+  /* Estilos existentes */
+
+@media (max-width: 768px) {
+    .app-header {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  

@@ -1,0 +1,107 @@
+.comment-list {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #1b1b2f;
+    border-radius: 10px;
+    color: #fbf5f3;
+  }
+  
+  .comment-list h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fbf5f3;
+  }
+  
+  /* Cuadrícula de comentarios */
+  .comments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Tarjetas de comentarios */
+  .comment-card {
+    background: #162447;
+    color: #fbf5f3;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .comment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Imagen de perfil */
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contenedor del encabezado */
+  .comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Nombre del usuario */
+  .comment-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e43f5a;
+  }
+  
+  /* Texto del comentario */
+  .comment-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+  
+  /* Fecha del comentario */
+  .comment-date {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+    text-align: right;
+  }
+  /* Estilos existentes */
+
+@media (max-width: 1024px) {
+    .comments-grid {
+      grid-template-columns: 1fr; /* 1 columna para tablets */
+      gap: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .comment-card {
+      padding: 0.8rem;
+    }
+  
+    .profile-image {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .comment-name {
+      font-size: 0.9rem;
+    }
+  
+    .comment-text {
+      font-size: 0.8rem;
+    }
+  }
+  

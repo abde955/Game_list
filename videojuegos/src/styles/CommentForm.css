@@ -1,0 +1,93 @@
+.comment-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e28413; /* Color amarillo */
+    color: #fbf5f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+  }
+  
+  .comment-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #162447;
+    text-align: center;
+  }
+  
+  .input,
+  .textarea {
+    display: block;
+    width: calc(100% - 2rem); /* Ajuste para márgenes uniformes */
+    margin: 0 auto 1rem auto;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: #162447;
+    box-shadow: 0 0 6px rgba(22, 36, 71, 0.5);
+    outline: none;
+  }
+  
+  .textarea {
+    height: 100px; /* Altura ajustada */
+    resize: vertical; /* Permitir que el usuario ajuste la altura */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Botón alineado a la derecha */
+  }
+  
+  .button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    background-color: #162447;
+    color: #fbf5f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #fbf5f3;
+    color: #162447;
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+  }
+  
+  .error {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  /* Estilos existentes */
+
+@media (max-width: 768px) {
+    .comment-form {
+      padding: 0.8rem;
+    }
+  
+    .input,
+    .textarea {
+      width: calc(100% - 1rem);
+      margin: 0.5rem auto;
+      font-size: 0.9rem;
+    }
+  
+    .textarea {
+      height: 80px;
+    }
+  
+    .button-container {
+      justify-content: center;
+    }
+  }
+  

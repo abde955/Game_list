@@ -1,0 +1,189 @@
+/* Contenedor principal */
+.game-list {
+    text-align: center;
+    color: #fbf5f3;
+    background-color: #1b1b2f;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor de la cuadrícula */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1rem; /* Menor separación entre tarjetas */
+    margin: 0 auto; /* Centrar la cuadrícula */
+    max-width: 1200px; /* Máximo ancho del contenedor */
+    padding: 0 2rem; /* Márgenes laterales */
+  }
+  
+  /* Tarjetas de videojuegos */
+  .game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Empieza el contenido desde la parte superior */
+    align-items: center;
+    background: #162447;
+    color: #fbf5f3;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+}
+
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Imagen del videojuego */
+  .game-image {
+    width: 100%;
+    height: 150px; /* Ajusta a una altura menos alargada */
+    max-height: 190px; /* Máxima altura para limitar el tamaño */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin distorsión */
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+  
+  /* Información del videojuego */
+  .game-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    flex-grow: 1; /* Asegura que la sección de información use el espacio sobrante */
+    width: 100%; /* Hace que la información ocupe todo el ancho */
+}
+
+  /* Ajustar el título para que no se desborde */
+  .game-info h2 {
+    font-size: 1.2rem; /* Ajustamos el tamaño del título */
+    font-weight: bold;
+    word-wrap: break-word; /* Permite que el texto se divida en varias líneas */
+    text-align: center; /* Centra el texto en la tarjeta */
+    margin: 0.5rem 0; /* Añadimos márgenes equilibrados */
+  }
+  
+  /* Rating */
+  .rating {
+    margin: 0.3rem 0; /* Reducimos el margen del rating */
+    font-size: 0.9rem;
+  }
+  
+  /* Enlace a detalles */
+  .details-link {
+    display: inline-block;
+    margin-top: 0.3rem; /* Menor separación con el rating */
+    background: #e43f5a;
+    color: #fbf5f3;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  }
+  
+  .details-link:hover {
+    background: #fbf5f3;
+    color: #1b1b2f;
+  }
+  
+  /* Controles de Paginación */
+  .pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  button {
+    background-color: #e43f5a;
+    color: #fbf5f3;
+    border: none;
+    padding: 0.6rem 1.2rem; /* Botones más grandes */
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #fbf5f3;
+    color: #1b1b2f;
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    color: #777;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* Contenedor de categorías */
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap; /* Permite que las etiquetas se ajusten en varias filas si son muchas */
+    margin: 0.5rem 0; /* Espaciado con el título y el rating */
+  }
+  
+  /* Estilo de las etiquetas */
+  .category-chip {
+    background-color: #e43f5a;
+    color: #fbf5f3;
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    text-transform: capitalize; /* Convierte el texto a formato capitalizado */
+  }
+  
+  /* Contenedor principal de comentarios */
+.comments-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #1b1b2f;
+    border-radius: 10px;
+  }
+  
+  /* Título de la sección */
+  .comments-container h2 {
+    text-align: center;
+    color: #fbf5f3;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Estilos existentes */
+
+@media (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+      gap: 0.8rem;
+    }
+  
+    .game-card {
+      height: 300px; /* Ajustar altura para pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* 1 columna */
+      padding: 0 1rem;
+    }
+  
+    .game-card {
+      height: auto; /* Altura automática */
+    }
+  }
+  
+  

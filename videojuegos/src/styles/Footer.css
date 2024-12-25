@@ -1,0 +1,40 @@
+.app-footer {
+    background-color: #162447;
+    color: #fbf5f3;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    border-top: 2px solid #e28413;
+  }
+  
+  .app-footer p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .footer-link {
+    color: #e28413;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #fbf5f3;
+  }
+  /* Estilos existentes */
+
+@media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  
